@@ -1,17 +1,31 @@
 <html>
-  <head>
-    <title>A Multiplayer Game</title>
-    <style>
-      canvas {
-        width: 800px;
-        height: 600px;
-        border: 5px solid black;
-      }
-    </style>
-    <script src="/socket.io/socket.io.js"></script>
-  </head>
-  <body>
-    <canvas id="canvas"></canvas>
-  </body>
-  <script src="/static/game.js"></script>
+<head>
+  <title>Jupiter Game</title>
+  <style>
+  canvas {
+    width: 800px;
+    height: 600px;
+    border: 5px solid black;
+  }
+  </style>
+  <script src="/socket.io/socket.io.js"></script>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <canvas id="canvas"></canvas>
+  <div class="Progress" width = 800px>
+      <span class="Progress-label" id="energyLabel"> Energy <strong>80%</strong> </span>
+      <progress max="100" id="energy" value="60" class="Progress-main" aria-labelledby="Progress-id">
+          <div class="Progress-bar" role="presentation">
+              <span class="Progress-value" style="width: 80%;">&nbsp;</span>
+          </div>
+      </progress>
+  </div>
+</body>
+
+<script src="/static/game.js"></script>
 </html>i
